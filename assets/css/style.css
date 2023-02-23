@@ -16,12 +16,19 @@ body {
 
 /* estilos das cartas */
 .card-container {
+    position: relative;
+
     cursor: pointer;
     width: 15rem;
     height: 15rem;
+
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
 }
 
 .card-front, .card-back {
+    position: absolute;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -31,10 +38,17 @@ body {
 
     border-radius: 2rem;
     box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.45);
+
+    backface-visibility: hidden;
+}
+
+.flip {
+    transform: rotateY(180deg);
 }
 
 .card-front {
-    background-color: #101c22;
+    transform: rotateY(180deg);
+    background-color: #101c2c;
 }
 
 .card-back {
