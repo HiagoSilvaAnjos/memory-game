@@ -16,6 +16,7 @@ body {
 
 /* estilos das cartas */
 .card-container {
+    cursor: pointer;
     width: 15rem;
     height: 15rem;
 }
