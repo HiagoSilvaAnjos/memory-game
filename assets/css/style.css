@@ -1,57 +1,128 @@
-@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 body {
-    font-family: 'Righteous', cursive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  font-family: "Righteous", cursive;
+  height: 100vh;
+  background-color: #c7cdd3;
+}
+
+/* estilo tabuleiro */
+.board-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+
+  height: auto;
+  max-width: 70rem;
 }
 
 /* estilos das cartas */
 .card-container {
-    position: relative;
+  position: relative;
 
-    cursor: pointer;
-    width: 15rem;
-    height: 15rem;
+  cursor: pointer;
+  width: 15rem;
+  height: 15rem;
 
-    transform-style: preserve-3d;
-    transition: transform 0.5s;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
 }
 
-.card-front, .card-back {
-    position: absolute;
+.card-front,
+.card-back {
+  position: absolute;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 
-    border-radius: 2rem;
-    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.45);
+  border-radius: 2rem;
+  box-shadow: 1rem 1rem 1rem #00000073;
 
-    backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .flip {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 .card-front {
-    transform: rotateY(180deg);
-    background-color: #101c2c;
+  transform: rotateY(180deg);
+  background-color: #101c2c;
 }
 
 .card-back {
-    background-color: #05c3ff;
-    font-size: 4rem;
+  background-color: #05c3ff;
+  font-size: 4rem;
+}
+
+/* Tela de game over */
+.game-over {
+  top: 0;
+  position: absolute;
+
+  width: 100%;
+  height: 100vh;
+
+  background-color: #000000e6;
+  color: #ffffff;
+
+  font-size: 5rem;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.game-over button {
+  padding: 2rem;
+  font-size: 2rem;
+
+  background-color: #cccc03;
+  color: #201f1f;
+
+  border: none;
+  border-radius: 1rem;
+
+  margin-top: 1rem;
+}
+
+.game-over button:hover {
+  cursor: pointer;
+}
+
+/* Media Queires */
+@media (max-height: 900px) {
+    .card-container {
+        position: relative;
+      
+        cursor: pointer;
+        width: 12rem;
+        height: 12rem;
+      
+        transform-style: preserve-3d;
+        transition: transform 0.5s;
+      }
+
+      .board-container {
+        gap: 1.5rem;
+      }
 }
