@@ -13,7 +13,28 @@ let iconsTechs = [
     'css',
 ];
 
-createCardsFromTemplate(iconsTechs);
+let cards = null;
+
+startGame()
+
+function startGame() {
+    
+    cards = createCardsFromTemplate(iconsTechs);
+    shuffleCards(cards);
+    console.log(cards);
+}
+
+function shuffleCards(cards) {
+    let currentIndex = cards.length;
+    let randomIndex = 0;
+
+    while (currentIndex !== 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+
+        [cards[randomIndex], cards[currentIndex]] = [cards[currentIndex], cards[randomIndex]]
+    }
+}
 
 // criar cartas
 function createCardsFromTemplate (iconsTechs) {
