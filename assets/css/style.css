@@ -126,3 +126,33 @@ body {
         gap: 1.5rem;
       }
 }
+
+@media (max-width: 767px) {
+  .board-container {
+    max-width: 60rem;
+  }
+
+  .card {
+
+    width: 12rem;
+    height: 12rem;
+  
+  }
+  
+}
+
+@media (max-width: 420px) {
+  .board-container {
+    max-width: 40rem;
+  }
+
+  .card {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .card img {
+    width: 80%;
+  }
+  
+}
