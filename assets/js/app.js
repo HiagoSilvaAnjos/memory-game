@@ -10,9 +10,8 @@ function startGame() {
 }
 
 // Inicializar cartas
-function initializeCards(cards) {
+function initializeCards() {
     let gameBoard = document.querySelector('.board-container');
-
     game.cards.forEach((card) => {
         let cardElement = document.createElement('div');
         cardElement.id = card.id;
