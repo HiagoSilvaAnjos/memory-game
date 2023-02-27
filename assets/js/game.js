@@ -61,10 +61,6 @@ let game = {
         return this.cards.filter(card => !card.flipped).length == 0;
     },
 
-
-
-
-
     createCardsFromTechs: function () {
 
         this.cards = [];
@@ -108,7 +104,4 @@ let game = {
         }
 
     }
-
-
-
 }

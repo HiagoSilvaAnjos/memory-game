@@ -30,8 +30,6 @@ function createCardContent(card, cardElement) {
 
     createCardFace(FRONT, card, cardElement);
     createCardFace(BACK, card, cardElement);
-
-
 }
 
 function createCardFace(face, card, element) {
@@ -48,7 +46,6 @@ function createCardFace(face, card, element) {
     }
     element.appendChild(cardElementFace);
 }
-
 
 function flipCard() {
 
