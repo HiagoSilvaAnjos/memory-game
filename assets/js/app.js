@@ -56,7 +56,7 @@ function flipCard() {
             if (game.checkMatch()) {
                 game.clearCards();
                 if (game.checkGameOver()) {
-                    let gameOverLayer = document.getElementById("gameOver");
+                    let gameOverLayer = document.querySelector(".game-over");
                     gameOverLayer.style.display = 'flex';
                 }
             } else {
@@ -75,9 +75,9 @@ function flipCard() {
 
 }
 
-function restart() {
+function restartGame() {
     game.clearCards();
     startGame();
-    let gameOverLayer = document.getElementById("gameOver");
+    let gameOverLayer = document.querySelector(".game-over");
     gameOverLayer.style.display = 'none';
 }
